@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test_secu_jwt?serverTimezone=UTC&createDatabaseIfNotExist=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Rootoorn
+
+  sql:
+    init:
+      platform: mysql
+      mode: always
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+    #    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+
+springdoc:
+  default-produces-media-type: application/json
